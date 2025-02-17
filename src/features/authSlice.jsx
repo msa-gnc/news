@@ -10,8 +10,14 @@ const authSlice=createSlice({
     },
     reducers:{
         kullaniciOlustur:(state,{payload})=>{
-            console.log(payload)
 
+            state.email=payload.email
+            state.password=payload.password
+        },
+
+        kullaniciSil:(state)=>{
+            state.email=""
+            state.password=""
         }
 
     }
@@ -19,6 +25,6 @@ const authSlice=createSlice({
 
 })
 
-export const {kullaniciOlustur}=authSlice.actions;
+export const {kullaniciOlustur,kullaniciSil}=authSlice.actions;
 
 export default authSlice.reducer;
