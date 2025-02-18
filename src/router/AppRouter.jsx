@@ -11,7 +11,7 @@ const AppRouter = () => {
     <BrowserRouter>
     <Navbar/>
     <Routes>
-        <Route path='/' element={<PrivateRouter/>}>
+        <Route path='/' element={<PrivateRouter />}>
         <Route path='' element={<News/>} />
         </Route>
 
